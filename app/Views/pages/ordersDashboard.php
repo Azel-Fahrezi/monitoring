@@ -30,12 +30,11 @@
                 <tr>
                   <td><?= $data->name ?></td>
                   <td><?= $data->tanggal_db ?></td>
-                  <td><?= $data->nomor_user ?></td>
                   <td>
                     <?php if($data->status == 'menunggu_konfirmasi'): ?>
                     <span class="badge-pill badge-warning"> Menunggu Tindaklanjuti</span>
                     <?php elseif($data->status == 'dalam_progres'): ?>
-                    <span class="badge-pill badge-primary"> Dalam Progres</span>
+                    <span class="badge-pill badge-primary"> Proses Tindaklanjuti</span>
                     <?php elseif($data->status == 'selesai'): ?>
                     <span class="badge-pill badge-success"> Selesai</span>
                     <?php endif ?>
@@ -86,10 +85,6 @@
           <div class="form-group form-group mb-4" id="select">
             <label for="id_user">User Pemesan</label>
             <select name="id_user" id="id_user" required></select>
-          </div>
-          <div class="form-group form-group mb-4">
-            <label for="nomor_user">Nomor Pemesan</label>
-            <input type="text" class="form-control" id="nomor_user" name="nomor_user" required>
           </div>
           <div class="form-group form-group mb-4">
             <label for="luas_sawah">Rekomendasi Perbaikan</label>

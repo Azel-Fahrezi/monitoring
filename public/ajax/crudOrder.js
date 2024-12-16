@@ -9,7 +9,6 @@ function editOrder(id) {
       $('#id').val(respond.data[0].id);
       $('#tanggal_db').val(respond.data[0].tanggal_db);
       $('#alamat_db').val(respond.data[0].alamat_db);
-      $('#nomor_user').val(respond.data[0].nomor_user);
       $('#luas_sawah').val(respond.data[0].luas_sawah);
       $('#jenis_tanaman').val(respond.data[0].jenis_tanaman);
       $('#admin').val(respond.data[0].admin);
@@ -22,13 +21,13 @@ function editOrder(id) {
       statusSelect.append(defaultOption);
 
       if (statusValue === 'menunggu_konfirmasi') {
-        const dalamProgresOption = $('<option>').val('dalam_progres').text('Konfirmasi Order');
+        const dalamProgresOption = $('<option>').val('dalam_progres').text('Kofirmasi Tindaklanjuti');
         const menungguKonfirmasi = $('<option>').val('menunggu_konfirmasi').text('Menunggu Konfirmasi');
         menungguKonfirmasi.attr('selected', 'selected');
         statusSelect.append(menungguKonfirmasi, dalamProgresOption);
       } else if (statusValue === 'dalam_progres') {
         const selesaiOption = $('<option>').val('selesai').text('Selesai');
-        const dalamProgresOption = $('<option>').val('dalam_progres').text('Dalam Progres');
+        const dalamProgresOption = $('<option>').val('dalam_progres').text('Proses Tindaklanjuti');
         dalamProgresOption.attr('selected', 'selected');
         statusSelect.append(dalamProgresOption, selesaiOption);
       }

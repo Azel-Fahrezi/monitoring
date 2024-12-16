@@ -9,7 +9,6 @@ function editOrder(id) {
         $('#id').val(respond.data[0].id);
         $('#tanggal_db').val(respond.data[0].tanggal_db);
         $('#alamat_db').val(respond.data[0].alamat_db);
-        $('#nomor_user').val(respond.data[0].nomor_user);
         $('#luas_sawah').val(respond.data[0].luas_sawah);
         $('#jenis_tanaman').val(respond.data[0].jenis_tanaman);
         $('#admin').val(respond.data[0].admin);

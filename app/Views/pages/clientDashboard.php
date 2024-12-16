@@ -29,10 +29,6 @@
                                                                                     <textarea type="text" class="form-control" name="alamat_db" id="alamat_db" required></textarea>
                                                                                 </div>
                                                                                 <div class="form-group form-group mb-4">
-                                                                                    <label for="input">Nomor Pemesan</label>
-                                                                                    <input type="text" class="form-control" id="nomor_user" name="nomor_user" required>
-                                                                                </div>
-                                                                                <div class="form-group form-group mb-4">
                                                                                     <label for="input">Luas Sawah</label>
                                                                                     <input type="text" class="form-control" id="luas_sawah" name="luas_sawah" required> 
                                                                                 </div>
@@ -67,7 +63,6 @@
                                                             <tr>
                                                                 <th>Alamat</th>
                                                                 <th>Tanggal Eksekusi</th>
-                                                                <th>Nomor HP</th>
                                                                 <th>Status</th>
                                                                 <th>Update</th>
                                                                 <th>Opsi</th>
@@ -78,12 +73,11 @@
                                                             <tr>
                                                                 <td><?= $data->alamat_db ?></td>
                                                                 <td><?= $data->tanggal_db ?></td>
-                                                                <td><?= $data->nomor_user ?></td>
                                                                 <td>
                                                                     <?php if($data->status == 'menunggu_konfirmasi'): ?>
                                                                         <span class="badge-pill badge-warning"> Menunggu Konfirmasi</span>
                                                                     <?php elseif($data->status == 'dalam_progres'): ?>
-                                                                        <span class="badge-pill badge-primary"> Dalam Progres</span>
+                                                                        <span class="badge-pill badge-primary"> Proses Tindaklanjuti</span>
                                                                     <?php elseif($data->status == 'selesai'): ?>
                                                                         <span class="badge-pill badge-success"> Selesai</span>
                                                                     <?php endif ?>

@@ -18,7 +18,6 @@ class Orders extends Model
         'id_user',
         'alamat_db',
         'tanggal_db',
-        'nomor_user',
         'luas_sawah',
         'jenis_tanaman',
         'admin',

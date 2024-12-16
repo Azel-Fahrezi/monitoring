@@ -22,7 +22,6 @@ class OrdersController extends BaseController
                 'id_user'  => $this->request->getPost('id_user'),
                 'alamat_db'   => $this->request->getPost('alamat_db'),
                 'tanggal_db'   => $this->request->getPost('tanggal_db'),
-                'nomor_user'   => $this->request->getPost('nomor_user'),
                 'luas_sawah'   => $this->request->getPost('luas_sawah'),
                 'jenis_tanaman'   => $this->request->getPost('jenis_tanaman'),
                 'admin'   => $this->request->getPost('admin'),
@@ -87,7 +86,6 @@ class OrdersController extends BaseController
                 $data = [
                     'alamat_db'   => $this->request->getPost('alamat_db'),
                     'tanggal_db'   => $this->request->getPost('tanggal_db'),
-                    'nomor_user'   => $this->request->getPost('nomor_user'),
                     'luas_sawah'   => $this->request->getPost('luas_sawah'),
                     'jenis_tanaman'   => $this->request->getPost('jenis_tanaman'),
                     'admin'   => $this->request->getPost('admin'),
@@ -97,7 +95,6 @@ class OrdersController extends BaseController
                 $data = [
                     'alamat_db'   => $this->request->getPost('alamat_db'),
                     'tanggal_db'   => $this->request->getPost('tanggal_db'),
-                    'nomor_user'   => $this->request->getPost('nomor_user'),
                     'luas_sawah'   => $this->request->getPost('luas_sawah'),
                     'jenis_tanaman'   => $this->request->getPost('jenis_tanaman'),
                     'admin'   => $this->request->getPost('admin'),
@@ -165,7 +162,6 @@ class OrdersController extends BaseController
         $spreadsheet->setActiveSheetIndex(0)
             ->setCellValue('A' . $column, $no++)
             ->setCellValue('B' . $column, $data['name'])
-            ->setCellValue('C' . $column, $data['nomor_user'])
             ->setCellValue('D' . $column, $data['luas_sawah'])
             ->setCellValue('E' . $column, $data['jenis'])
             ->setCellValue('F' . $column, $data['tanggal_db']);
