@@ -18,7 +18,6 @@
                 <tr>
                   <th>Nama Pemesan</th>
                   <th>Tanggal</th>
-                  <th>Nomor HP Pemesan</th>
                   <th>Status</th>
                   <th>Tanggal Pemesanan</th>
                   <th>Tanggal Update</th>
@@ -83,7 +82,7 @@
             <textarea type="text" class="form-control" name="alamat_db" id="alamat_db" required></textarea>
           </div>
           <div class="form-group form-group mb-4" id="select">
-            <label for="id_user">User Pemesan</label>
+            <label for="id_user">Unit Audit</label>
             <select name="id_user" id="id_user" required></select>
           </div>
           <div class="form-group form-group mb-4">

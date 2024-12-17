@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8" />
-    <title>SIPJP | <?= $page ?></title>
+    <title>Monitoring Temuan SPI | <?= $page ?></title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="<?= base_url('assets/images/favicon.ico') ?>">
     <link href="<?= base_url('assets/libs/air-datepicker/css/datepicker.min.css') ?>" rel="stylesheet" type="text/css" />

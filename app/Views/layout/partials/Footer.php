@@ -2,7 +2,7 @@
                     <div class="container-fluid">
                         <div class="row">
                             <div class="col-sm-6">
-                                <span id="current-year"></span>. SIPJP
+                                <span id="current-year"></span>. Monitoring Temuan SPI
                             </div>
                             <div class="col-sm-6">
                                 <div class="text-sm-right d-none d-sm-block">

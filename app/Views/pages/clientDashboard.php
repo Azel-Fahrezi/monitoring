@@ -6,7 +6,6 @@
                                         <div class="card-body">
                                             <div class="row">
                                                 <div class="col-12">
-                                                <button type="button" class="btn btn-primary btn-sm waves-effect waves-light mb-3" data-toggle="modal" data-target=".bs-example-modal-xl">Tambah Order Saya</button>
                                                 <div id="modal" class="modal fade bs-example-modal-xl" tabindex="-1" role="dialog" aria-labelledby="myExtraLargeModalLabel" aria-hidden="true">
                                                                 <div class="modal-dialog modal-xl">
                                                                     <div class="modal-content">
@@ -21,25 +20,8 @@
                                                                                 <input hidden name="id" id="id"/>
                                                                                 <input hidden value="<?= session()->get('username') ?>" name="username" id="username"/>
                                                                                 <div class="form-group form-group mb-4">
-                                                                                    <label for="input">Tanggal</label>
-                                                                                    <input type="date" class="form-control datepicker-here" data-language="en" name="tanggal_db" id="tanggal_db" required/>
-                                                                                </div>
-                                                                                <div class="form-group form-group mb-4">
-                                                                                    <label for="input">Deskripsi Temuan</label>
-                                                                                    <textarea type="text" class="form-control" name="alamat_db" id="alamat_db" required></textarea>
-                                                                                </div>
-                                                                                <div class="form-group form-group mb-4">
-                                                                                    <label for="input">Rekomendasi Perbaikan</label>
+                                                                                    <label for="input">Detail Tindak Lanjut</label>
                                                                                     <input type="text" class="form-control" id="luas_sawah" name="luas_sawah" required> 
-                                                                                </div>
-                                                                                <div class="form-group form-group mb-4">
-                                                                                    <label for="input">Kategori Temuan</label>
-                                                                                    <select class="custom-select" name="jenis_tanaman" id="jenis_tanaman" required>
-                                                                                        <option selected>Pilih Kategori</option>
-                                                                                        <?php foreach($jenis as $data): ?>
-                                                                                        <option value="<?= $data['id'] ?>"><?= $data['nama_tanaman'] ?></option>
-                                                                                        <?php endforeach ?>
-                                                                                    </select>
                                                                                 </div>
                                                                                 <div class="form-group form-group mb-4">
                                                                                     <label for="input">Admin Eksekusi</label>
@@ -57,7 +39,7 @@
                                                                                     </select>
                                                                                 </div>
                                                                                 <div class="mt-4">
-                                                                                    <button class="btn btn-primary waves-effect waves-light" onclick="saveOrder()">Save Order</button>
+                                                                                    <button class="btn btn-primary waves-effect waves-light" onclick="saveOrder()">Simpan</button>
                                                                                 </div>
                                                                             </form>
                                                                         </div>

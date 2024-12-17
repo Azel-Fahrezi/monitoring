@@ -6,12 +6,12 @@
                                         <div class="card-body">
                                             <div class="row">
                                                 <div class="col-12">
-                                                <button type="button" class="btn btn-primary btn-sm waves-effect waves-light mb-3" data-toggle="modal" data-target=".bs-example-modal-xl">Tambah Jenis</button>
+                                                <button type="button" class="btn btn-primary btn-sm waves-effect waves-light mb-3" data-toggle="modal" data-target=".bs-example-modal-xl">Tambah Kategori</button>
                                                             <div id="modal" class="modal fade bs-example-modal-xl" tabindex="-1" role="dialog" aria-labelledby="myExtraLargeModalLabel" aria-hidden="true">
                                                                 <div class="modal-dialog modal-xl">
                                                                     <div class="modal-content">
                                                                         <div class="modal-header">
-                                                                            <h5 class="modal-title" id="myExtraLargeModalLabel">Tambah Jenis</h5>
+                                                                            <h5 class="modal-title" id="myExtraLargeModalLabel">Tambah Kategori</h5>
                                                                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                                                                 <span aria-hidden="true" class="close">&times;</span>
                                                                             </button>
@@ -24,7 +24,7 @@
                                                                                     <label for="jenisname">Kategori Temuan</label>
                                                                                 </div>
                                                                                 <div class="mt-4">
-                                                                                    <button class="btn btn-primary waves-effect waves-light" onclick="saveJenis()">Save Jenis</button>
+                                                                                    <button class="btn btn-primary waves-effect waves-light" onclick="saveJenis()">Simpan</button>
                                                                                 </div>
                                                                             </form>
                                                                         </div>
