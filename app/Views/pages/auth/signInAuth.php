@@ -1,6 +1,6 @@
 <?= $this->extend('layout/LayoutAuth') ?>
 <?= $this->section('content') ?>
-                                <h5 class="mb-5 text-center">Sign in to continue to Xoric.</h5>
+                                <h5 class="mb-5 text-center">Login untuk melanjutkan.</h5>
                                     <form class="form-horizontal" id="SignIn">
                                         <div class="row">
                                             <div class="col-md-12">

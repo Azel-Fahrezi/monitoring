@@ -1,6 +1,6 @@
 <?= $this->extend('layout/LayoutAuth') ?>
 <?= $this->section('content') ?>
-                                    <h5 class="mb-5 text-center">Register Account to Xoric.</h5>
+                                    <h5 class="mb-5 text-center">Daftar untuk melanjutkan.</h5>
                                     <form class="form-horizontal" id="SignUp">
                                     <?= csrf_field() ?>
                                         <div class="row">
