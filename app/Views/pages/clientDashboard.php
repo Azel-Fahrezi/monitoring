@@ -67,7 +67,7 @@
                                                     <table id="datatable" class="table table-bordered dt-responsive nowrap" style="border-collapse: collapse; border-spacing: 0; width: 100%;">
                                                         <thead>
                                                             <tr>
-                                                                <th>Alamat</th>
+                                                                <th>Deskripsi Temuan</th>
                                                                 <th>Tanggal Eksekusi</th>
                                                                 <th>Status</th>
                                                                 <th>Update</th>
