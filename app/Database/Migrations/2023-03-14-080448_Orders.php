@@ -20,7 +20,7 @@ class Orders extends Migration
                 'type'       => 'INT',
                 'constraint' => 11,
             ],
-            'alamat_db' => [
+            'deskripsi_db' => [
                 'type' => 'TEXT',
             ],
             'tanggal_db' => [
@@ -31,7 +31,7 @@ class Orders extends Migration
                 'type' => 'VARCHAR',
                 'constraint' => '255'
             ],
-            'luas_sawah' => [
+            'perbaikan' => [
                 'type' => 'TEXT'
             ],
             'jenis_tanaman' => [

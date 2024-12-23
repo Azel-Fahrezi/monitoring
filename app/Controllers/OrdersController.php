@@ -20,9 +20,9 @@ class OrdersController extends BaseController
         if ($this->request->isAJAX() && $this->request->getMethod(true) === 'POST') {
             $data = [
                 'id_user'  => $this->request->getPost('id_user'),
-                'alamat_db'   => $this->request->getPost('alamat_db'),
+                'deskripsi_db'   => $this->request->getPost('deskripsi_db'),
                 'tanggal_db'   => $this->request->getPost('tanggal_db'),
-                'luas_sawah'   => $this->request->getPost('luas_sawah'),
+                'perbaikan'   => $this->request->getPost('perbaikan'),
                 'jenis_tanaman'   => $this->request->getPost('jenis_tanaman'),
                 'admin'   => $this->request->getPost('admin'),
             ];
@@ -84,18 +84,18 @@ class OrdersController extends BaseController
         if ($method === 'POST') {
             if (!session()->get('role') == 'user') {
                 $data = [
-                    'alamat_db'   => $this->request->getPost('alamat_db'),
+                    'deskripsi_db'   => $this->request->getPost('deskripsi_db'),
                     'tanggal_db'   => $this->request->getPost('tanggal_db'),
-                    'luas_sawah'   => $this->request->getPost('luas_sawah'),
+                    'perbaikan'   => $this->request->getPost('perbaikan'),
                     'jenis_tanaman'   => $this->request->getPost('jenis_tanaman'),
                     'admin'   => $this->request->getPost('admin'),
                     'updated_at' => date('Y-m-d H:i:s'),
                 ];
             } else {
                 $data = [
-                    'alamat_db'   => $this->request->getPost('alamat_db'),
+                    'deskripsi_db'   => $this->request->getPost('deskripsi_db'),
                     'tanggal_db'   => $this->request->getPost('tanggal_db'),
-                    'luas_sawah'   => $this->request->getPost('luas_sawah'),
+                    'perbaikan'   => $this->request->getPost('perbaikan'),
                     'jenis_tanaman'   => $this->request->getPost('jenis_tanaman'),
                     'admin'   => $this->request->getPost('admin'),
                     'status'   => $this->request->getPost('status'),
@@ -162,7 +162,7 @@ class OrdersController extends BaseController
         $spreadsheet->setActiveSheetIndex(0)
             ->setCellValue('A' . $column, $no++)
             ->setCellValue('B' . $column, $data['name'])
-            ->setCellValue('D' . $column, $data['luas_sawah'])
+            ->setCellValue('D' . $column, $data['perbaikan'])
             ->setCellValue('E' . $column, $data['jenis'])
             ->setCellValue('F' . $column, $data['tanggal_db']);
     

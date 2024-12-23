@@ -25,11 +25,11 @@
                                                                                 </div>
                                                                                 <div class="form-group form-group mb-4">
                                                                                     <label for="input">Deskripsi Temuan</label>
-                                                                                    <textarea type="text" class="form-control" name="alamat_db" id="alamat_db" required></textarea>
+                                                                                    <textarea type="text" class="form-control" name="deskripsi_db" id="deskripsi_db" required></textarea>
                                                                                 </div>
                                                                                 <div class="form-group form-group mb-4">
                                                                                     <label for="input">Rekomendasi Perbaikan</label>
-                                                                                    <input type="text" class="form-control" id="luas_sawah" name="luas_sawah" required> 
+                                                                                    <input type="text" class="form-control" id="perbaikan" name="perbaikan" required> 
                                                                                 </div>
                                                                                 <div class="form-group form-group mb-4">
                                                                                     <label for="input">Kategori Temuan</label>
@@ -76,7 +76,7 @@
                                                         <tbody>
                                                             <?php foreach($content as $data): ?>
                                                             <tr>
-                                                                <td><?= $data->alamat_db ?></td>
+                                                                <td><?= $data->deskripsi_db ?></td>
                                                                 <td><?= $data->tanggal_db ?></td>
                                                                 <td>
                                                                     <?php if($data->status == 'menunggu_konfirmasi'): ?>

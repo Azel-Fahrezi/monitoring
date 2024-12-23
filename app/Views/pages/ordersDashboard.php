@@ -78,16 +78,16 @@
             <input type="date" class="form-control datepicker-here" data-language="en" name="tanggal_db" id="tanggal_db" required/>
           </div>
           <div class="form-group form-group mb-4">
-            <label for="alamat_db">Deskripsi Temuan</label>
-            <textarea type="text" class="form-control" name="alamat_db" id="alamat_db" required></textarea>
+            <label for="deskripsi_db">Deskripsi Temuan</label>
+            <textarea type="text" class="form-control" name="deskripsi_db" id="deskripsi_db" required></textarea>
           </div>
           <div class="form-group form-group mb-4" id="select">
             <label for="id_user">Unit Audit</label>
             <select name="id_user" id="id_user" required></select>
           </div>
           <div class="form-group form-group mb-4">
-            <label for="luas_sawah">Rekomendasi Perbaikan</label>
-            <input type="text" class="form-control" id="luas_sawah" name="luas_sawah" required> 
+            <label for="perbaikan">Rekomendasi Perbaikan</label>
+            <input type="text" class="form-control" id="perbaikan" name="perbaikan" required> 
           </div>
           <div class="form-group form-group mb-4">
             <label for="jenis_tanaman">Kategori Temuan</label>

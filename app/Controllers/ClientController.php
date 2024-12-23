@@ -18,9 +18,9 @@ class ClientController extends BaseController
         if ($this->request->isAJAX() && $this->request->getMethod(true) === 'POST') {
             $data = [
                 'id_user'  => session()->get('id'),
-                'alamat_db'   => $this->request->getPost('alamat_db'),
+                'deskripsi_db'   => $this->request->getPost('deskripsi_db'),
                 'tanggal_db'   => $this->request->getPost('tanggal_db'),
-                'luas_sawah'   => $this->request->getPost('luas_sawah'),
+                'perbaikan'   => $this->request->getPost('perbaikan'),
                 'jenis_tanaman'   => $this->request->getPost('jenis_tanaman'),
                 'admin'   => $this->request->getPost('admin'),
             ];

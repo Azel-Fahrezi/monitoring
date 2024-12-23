@@ -16,9 +16,9 @@ class Orders extends Model
     protected $protectFields    = true;
     protected $allowedFields    = [
         'id_user',
-        'alamat_db',
+        'deskripsi_db',
         'tanggal_db',
-        'luas_sawah',
+        'perbaikan',
         'jenis_tanaman',
         'admin',
         'status',

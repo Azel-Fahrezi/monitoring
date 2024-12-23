@@ -8,8 +8,8 @@ function editOrder(id) {
     success: function(respond) {
       $('#id').val(respond.data[0].id);
       $('#tanggal_db').val(respond.data[0].tanggal_db);
-      $('#alamat_db').val(respond.data[0].alamat_db);
-      $('#luas_sawah').val(respond.data[0].luas_sawah);
+      $('#deskripsi_db').val(respond.data[0].deskripsi_db);
+      $('#perbaikan').val(respond.data[0].perbaikan);
       $('#jenis_tanaman').val(respond.data[0].jenis_tanaman);
       $('#admin').val(respond.data[0].admin);
 
