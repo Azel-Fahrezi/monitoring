@@ -24,7 +24,7 @@ function editOrder(id) {
         statusSelect.append(defaultOption);
   
         if (statusValue === 'menunggu_konfirmasi') {
-          const dalamProgresOption = $('<option>').val('dalam_progres').text('Kofirmasi Tindaklanjuti');
+          const dalamProgresOption = $('<option>').val('dalam_progres').text('Konfirmasi Tindaklanjuti');
           const menungguKonfirmasi = $('<option>').val('menunggu_konfirmasi').text('Menunggu Konfirmasi');
           menungguKonfirmasi.attr('selected', 'selected');
           statusSelect.append(menungguKonfirmasi, dalamProgresOption);

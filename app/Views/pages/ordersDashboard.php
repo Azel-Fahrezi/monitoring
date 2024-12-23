@@ -16,10 +16,10 @@
             <table id="datatable" class="table table-bordered dt-responsive nowrap">
               <thead>
                 <tr>
-                  <th>Nama Pemesan</th>
+                  <th>Unit Audit</th>
                   <th>Tanggal</th>
                   <th>Status</th>
-                  <th>Tanggal Pemesanan</th>
+                  <th>Tanggal Pembuatan</th>
                   <th>Tanggal Update</th>
                   <th>Opsi</th>
                 </tr>

@@ -49,17 +49,6 @@
                                                                 </div>
                                                             </div>
                                                         </li>
-                                                        <li class="list-group-item">
-                                                            <div class="media my-2">
-                                                                <div class="media-body">
-                                                                    <p class="text-muted mb-2">Pelanggan</p>
-                                                                    <h5 class="mb-0"><?= $user ?></h5>
-                                                                </div>
-                                                                <div class="icons-lg ml-2 align-self-center">
-                                                                    <i class="uim uim-ruler"></i>
-                                                                </div>
-                                                            </div>
-                                                        </li>
                                                     </ul>
                                                 </div>
                                             </div>
