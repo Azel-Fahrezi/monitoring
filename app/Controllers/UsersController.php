@@ -36,7 +36,7 @@ class UsersController extends BaseController
         } elseif($this->request->getMethod(true) === 'GET') {
             $data = [
                 'content' => $model->getUserWithoutParams('superadmin'),
-                'page' => 'List Users'
+                'page' => 'Daftar Users'
             ];
             //dd($data);
             return view('pages/usersDashboard', $data);

@@ -23,13 +23,13 @@ class OrdersController extends BaseController
                 'deskripsi_db'   => $this->request->getPost('deskripsi_db'),
                 'tanggal_db'   => $this->request->getPost('tanggal_db'),
                 'perbaikan'   => $this->request->getPost('perbaikan'),
-                'jenis_tanaman'   => $this->request->getPost('jenis_tanaman'),
+                'kategori'   => $this->request->getPost('kategori'),
                 'admin'   => $this->request->getPost('admin'),
             ];
             
             $saved = $orderModel->save($data);
             $status = $saved ? 'success' : 'error';
-            $text = $saved ? 'Berhasil menyimpan data order.' : 'Gagal menyimpan data order.';
+            $text = $saved ? 'Berhasil menyimpan data temuan.' : 'Gagal menyimpan data temuan.';
             
             return $this->response->setJSON([
                 'status' => $saved,
@@ -54,7 +54,7 @@ class OrdersController extends BaseController
             } else {
                 $content = $orderModel->getOrders();
                 $admin = $userModel->getUserWithParams('admin');
-                $page = 'Menampilkan Daftar Temuan';
+                $page = 'Daftar Temuan';
             }
             
             $jenis = $jenisModel->findAll();
@@ -87,7 +87,7 @@ class OrdersController extends BaseController
                     'deskripsi_db'   => $this->request->getPost('deskripsi_db'),
                     'tanggal_db'   => $this->request->getPost('tanggal_db'),
                     'perbaikan'   => $this->request->getPost('perbaikan'),
-                    'jenis_tanaman'   => $this->request->getPost('jenis_tanaman'),
+                    'kategori'   => $this->request->getPost('kategori'),
                     'admin'   => $this->request->getPost('admin'),
                     'updated_at' => date('Y-m-d H:i:s'),
                 ];
@@ -96,7 +96,7 @@ class OrdersController extends BaseController
                     'deskripsi_db'   => $this->request->getPost('deskripsi_db'),
                     'tanggal_db'   => $this->request->getPost('tanggal_db'),
                     'perbaikan'   => $this->request->getPost('perbaikan'),
-                    'jenis_tanaman'   => $this->request->getPost('jenis_tanaman'),
+                    'kategori'   => $this->request->getPost('kategori'),
                     'admin'   => $this->request->getPost('admin'),
                     'status'   => $this->request->getPost('status'),
                     'updated_at' => date('Y-m-d H:i:s'),
@@ -109,7 +109,7 @@ class OrdersController extends BaseController
                 'status' => $status,
                 'icon' => $status ? 'success' : 'error',
                 'title' => $status ? 'Success!' : 'Warning!',
-                'text' => $status ? 'Berhasil menyimpan data order.' : 'Gagal menyimpan data order.',
+                'text' => $status ? 'Berhasil menyimpan data temuan.' : 'Gagal menyimpan data temuan.',
             ];
         } elseif ($method === 'GET') {
             $response = [
@@ -132,7 +132,7 @@ class OrdersController extends BaseController
             'status' => $deleted,
             'icon' => $deleted ? 'success' : 'error',
             'title' => $deleted ? 'Success!' : 'Warning!',
-            'text' => $deleted ? 'Berhasil hapus data order.' : 'Gagal hapus data order.',
+            'text' => $deleted ? 'Berhasil hapus data temuan.' : 'Gagal hapus data temuan.',
         ];
     
         return $this->response->setJSON($response);

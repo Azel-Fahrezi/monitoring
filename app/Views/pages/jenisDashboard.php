@@ -20,7 +20,7 @@
                                                                             <form id="form" >
                                                                                 <div class="form-group form-group-custom mb-4">
                                                                                     <input hidden name="id" id="id">
-                                                                                    <input type="text" class="form-control" id="nama_tanaman" name="nama_tanaman" required>
+                                                                                    <input type="text" class="form-control" id="nama_kategori" name="nama_kategori" required>
                                                                                     <label for="jenisname">Kategori Temuan</label>
                                                                                 </div>
                                                                                 <div class="mt-4">
@@ -43,7 +43,7 @@
                                                         <tbody>
                                                             <?php foreach($content as $data): ?>
                                                             <tr>
-                                                                <td><?= $data['nama_tanaman'] ?></td>
+                                                                <td><?= $data['nama_kategori'] ?></td>
                                                                 <td><?= $data['created_at'] ?></td>
                                                                 <td><?= $data['updated_at'] ?></td>
                                                                 <td>

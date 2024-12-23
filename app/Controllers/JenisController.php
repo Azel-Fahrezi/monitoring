@@ -18,12 +18,12 @@ class JenisController extends BaseController
                 'status' => true,
                 'icon' => 'success',
                 'title' => 'Success!',
-                'text' => 'Berhasil menyimpan data jenis.',
+                'text' => 'Berhasil menyimpan data kategori.',
             ] : [
                 'status' => false,
                 'icon' => 'error',
                 'title' => 'Warning!',
-                'text' => 'Gagal menyimpan data jenis.',
+                'text' => 'Gagal menyimpan data kategori.',
             ];
 
             return $this->response->setJSON($status);
@@ -32,7 +32,7 @@ class JenisController extends BaseController
         $jenisTanaman = $jenisTanamanModel->findAll();
         $data = [
             'content' => $jenisTanaman,
-            'page' => 'List Jenis'
+            'page' => 'Daftar Kategori'
         ];
         return view('pages/jenisDashboard', $data);
     }
@@ -42,7 +42,7 @@ class JenisController extends BaseController
     {
         $model = new JenisTanaman();
         $data = [
-            'nama_tanaman' => $this->request->getPost('nama_tanaman'),
+            'nama_kategori' => $this->request->getPost('nama_kategori'),
             'updated_at' => date('Y-m-d H:i:s'),
         ];
         if ($this->request->isAJAX() && $this->request->getMethod(true) === 'POST') {
@@ -52,14 +52,14 @@ class JenisController extends BaseController
                     'status' => true,
                     'icon' => 'success',
                     'title' => 'Success!',
-                    'text' => 'Berhasil menyimpan data jenis.',
+                    'text' => 'Berhasil menyimpan data kategori.',
                 ]);
             } else {
                 return $this->response->setJSON([
                     'status' => false,
                     'icon' => 'error',
                     'title' => 'Warning!',
-                    'text' => 'Gagal menyimpan data jenis.',
+                    'text' => 'Gagal menyimpan data kategori.',
                 ]);
             }
         } elseif ($this->request->isAJAX() && $this->request->getMethod(true) === 'GET') {
@@ -78,14 +78,14 @@ class JenisController extends BaseController
                     'status' => true,
                     'icon' => 'success',
                     'title' => 'Success!',
-                    'text' => 'Berhasil hapus data jenis.',
+                    'text' => 'Berhasil hapus data kategori.',
                 ]);
             } else {
                 return $this->response->setJSON([
                     'status' => false,
                     'icon' => 'error',
                     'title' => 'Warning!',
-                    'text' => 'Gagal hapus data jenis.',
+                    'text' => 'Gagal hapus data kategori.',
                 ]);
             }
         }

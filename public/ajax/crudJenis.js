@@ -8,7 +8,7 @@ function editJenis(id) {
         success: function(respond)
         {
             $('[name="id"]').val(respond.data.id);
-            $('[name="nama_tanaman"]').val(respond.data.nama_tanaman);
+            $('[name="nama_kategori"]').val(respond.data.nama_kategori);
             $('#modal').modal('show');
             $('.modal-title').text('Edit Jenis'); 
         },
@@ -78,7 +78,7 @@ function deleteJenis(id) {
                     swal.fire({
                         position: 'top-end',
                         icon: 'success',
-                        title: 'Jenis berhasil dihapus!',
+                        title: 'kategori berhasil dihapus!',
                         showConfirmButton: false,
                         timer: 2000
                     }).then (function() {

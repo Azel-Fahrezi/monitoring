@@ -7,7 +7,7 @@ use CodeIgniter\Model;
 class JenisTanaman extends Model
 {
     protected $DBGroup          = 'default';
-    protected $table            = 'jenis_tanaman';
+    protected $table            = 'kategori';
     protected $primaryKey       = 'id';
     protected $useAutoIncrement = true;
     protected $insertID         = 0;
@@ -15,7 +15,7 @@ class JenisTanaman extends Model
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
     protected $allowedFields    = [
-        'nama_tanaman',
+        'nama_kategori',
         'updated_at',
     ];
 

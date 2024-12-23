@@ -10,7 +10,7 @@
                                                                 <div class="modal-dialog modal-xl">
                                                                     <div class="modal-content">
                                                                         <div class="modal-header">
-                                                                            <h5 class="modal-title" id="myExtraLargeModalLabel">Tambah Order</h5>
+                                                                            <h5 class="modal-title" id="myExtraLargeModalLabel">Tambah Temuan</h5>
                                                                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                                                                 <span aria-hidden="true" class="close">&times;</span>
                                                                             </button>
@@ -33,10 +33,10 @@
                                                                                 </div>
                                                                                 <div class="form-group form-group mb-4">
                                                                                     <label for="input">Kategori Temuan</label>
-                                                                                    <select class="custom-select" name="jenis_tanaman" id="jenis_tanaman" required>
+                                                                                    <select class="custom-select" name="kategori" id="kategori" required>
                                                                                         <option selected>Pilih Kategori</option>
                                                                                         <?php foreach($jenis as $data): ?>
-                                                                                        <option value="<?= $data['id'] ?>"><?= $data['nama_tanaman'] ?></option>
+                                                                                        <option value="<?= $data['id'] ?>"><?= $data['nama_kategori'] ?></option>
                                                                                         <?php endforeach ?>
                                                                                     </select>
                                                                                 </div>
@@ -50,7 +50,7 @@
                                                                                     </select>
                                                                                 </div>
                                                                                 <div class="form-group form-group mb-4" id="status_order" hidden>
-                                                                                    <label for="status">Status Order</label>
+                                                                                    <label for="status">Status Temuan</label>
                                                                                     <select class="custom-select" name="status" id="status" required>
                                                                                     <option selected>Pilih Status</option>
                                                                                     </select>

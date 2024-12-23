@@ -21,13 +21,13 @@ class ClientController extends BaseController
                 'deskripsi_db'   => $this->request->getPost('deskripsi_db'),
                 'tanggal_db'   => $this->request->getPost('tanggal_db'),
                 'perbaikan'   => $this->request->getPost('perbaikan'),
-                'jenis_tanaman'   => $this->request->getPost('jenis_tanaman'),
+                'kategori'   => $this->request->getPost('kategori'),
                 'admin'   => $this->request->getPost('admin'),
             ];
             
             $saved = $orderModel->save($data);
             $status = $saved ? 'success' : 'error';
-            $text = $saved ? 'Berhasil menyimpan data order.' : 'Gagal menyimpan data order.';
+            $text = $saved ? 'Berhasil menyimpan data temuan.' : 'Gagal menyimpan data temuan.';
             
             return $this->response->setJSON([
                 'status' => $saved,

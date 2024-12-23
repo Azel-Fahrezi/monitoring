@@ -10,7 +10,7 @@ function editOrder(id) {
       $('#tanggal_db').val(respond.data[0].tanggal_db);
       $('#deskripsi_db').val(respond.data[0].deskripsi_db);
       $('#perbaikan').val(respond.data[0].perbaikan);
-      $('#jenis_tanaman').val(respond.data[0].jenis_tanaman);
+      $('#kategori').val(respond.data[0].kategori);
       $('#admin').val(respond.data[0].admin);
 
       const statusValue = respond.data[0].status;
@@ -97,7 +97,7 @@ function deleteOrder(id) {
             Swal.fire({
               position: 'top-end',
               icon: 'success',
-              title: 'Orders berhasil dihapus!',
+              title: 'Temuan berhasil dihapus!',
               showConfirmButton: false,
               timer: 2000
             }).then(() => location.reload());

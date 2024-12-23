@@ -10,7 +10,7 @@ function editOrder(id) {
         $('#tanggal_db').val(respond.data[0].tanggal_db);
         $('#deskripsi_db').val(respond.data[0].deskripsi_db);
         $('#perbaikan').val(respond.data[0].perbaikan);
-        $('#jenis_tanaman').val(respond.data[0].jenis_tanaman);
+        $('#kategori').val(respond.data[0].kategori);
         $('#admin').val(respond.data[0].admin);
         $('#modal').modal('show');
         $('.modal-title').text('Edit Order');

@@ -7,7 +7,7 @@ use CodeIgniter\Model;
 class Orders extends Model
 {
     protected $DBGroup          = 'default';
-    protected $table            = 'orders';
+    protected $table            = 'temuan';
     protected $primaryKey       = 'id';
     protected $useAutoIncrement = true;
     protected $insertID         = 0;
@@ -19,7 +19,7 @@ class Orders extends Model
         'deskripsi_db',
         'tanggal_db',
         'perbaikan',
-        'jenis_tanaman',
+        'kategori',
         'admin',
         'status',
         'updated_at'
@@ -51,39 +51,39 @@ class Orders extends Model
 
     function getOrders()
     {
-        return $this->db->table('orders')
+        return $this->db->table('temuan')
             ->select('
                 users.name,
-                jenis_tanaman.nama_tanaman as jenis,
-                orders.*
+                kategori.nama_kategori as jenis,
+                temuan.*
             ')
-            ->join('users', 'orders.id_user = users.id')
-            ->join('jenis_tanaman', 'orders.jenis_tanaman = jenis_tanaman.id')
+            ->join('users', 'temuan.id_user = users.id')
+            ->join('kategori', 'temuan.kategori = kategori.id')
             ->get()->getResult();
     }
 
     function getOrdersByAdmin($id)
     {
-        return $this->db->table('orders')
+        return $this->db->table('temuan')
             ->select('
                 users.name,
-                jenis_tanaman.nama_tanaman as jenis,
-                orders.*
+                kategori.nama_kategori as jenis,
+                temuan.*
             ')
-            ->join('users', 'orders.id_user = users.id')
-            ->join('jenis_tanaman', 'orders.jenis_tanaman = jenis_tanaman.id')
-            ->where('orders.admin', $id)
+            ->join('users', 'temuan.id_user = users.id')
+            ->join('kategori', 'temuan.kategori = kategori.id')
+            ->where('temuan.admin', $id)
             ->get()->getResult();
     }
     
     function getOrderByID($id) 
     {
         return $this->db
-            ->table('orders')
-            ->select('users.name, jenis_tanaman.nama_tanaman as jenis, orders.*')
-            ->join('users', 'orders.id_user = users.id')
-            ->join('jenis_tanaman', 'orders.jenis_tanaman = jenis_tanaman.id')
-            ->where('orders.id', $id)
+            ->table('temuan')
+            ->select('users.name, kategori.nama_kategori as jenis, temuan.*')
+            ->join('users', 'temuan.id_user = users.id')
+            ->join('kategori', 'temuan.kategori = kategori.id')
+            ->where('temuan.id', $id)
             ->get()
             ->getResult();
     }
@@ -91,30 +91,30 @@ class Orders extends Model
 
     function getOrderByIdUser($id)
     {
-        return $this->db->table('orders')
+        return $this->db->table('temuan')
             ->select('
                 users.name,
-                jenis_tanaman.nama_tanaman as jenis,
-                orders.*
+                kategori.nama_kategori as jenis,
+                temuan.*
             ')
-            ->join('users', 'orders.id_user = users.id')
-            ->join('jenis_tanaman', 'orders.jenis_tanaman = jenis_tanaman.id')
-            ->where('orders.id_user', $id)
+            ->join('users', 'temuan.id_user = users.id')
+            ->join('kategori', 'temuan.kategori = kategori.id')
+            ->where('temuan.id_user', $id)
             ->get()->getResult();
     }
 
     function findDataInBetweenByUsersId($start, $end, $id)
     {
-        return $this->db->table('orders')
+        return $this->db->table('temuan')
             ->select('
                 users.name,
-                jenis_tanaman.nama_tanaman as jenis,
-                orders.*
+                kategori.nama_kategori as jenis,
+                temuan.*
             ')
-            ->join('users', 'orders.id_user = users.id')
-            ->join('jenis_tanaman', 'orders.jenis_tanaman = jenis_tanaman.id')
-            ->where('orders.admin', $id)
-            ->where("orders.tanggal_db BETWEEN '$start' AND '$end'")
+            ->join('users', 'temuan.id_user = users.id')
+            ->join('kategori', 'temuan.kategori = kategori.id')
+            ->where('temuan.admin', $id)
+            ->where("temuan.tanggal_db BETWEEN '$start' AND '$end'")
             ->get()
             ->getResultArray();
     }

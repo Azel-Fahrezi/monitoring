@@ -10,7 +10,6 @@
             <div class="d-flex justify-content-between align-items-center">
               <button type="button" class="btn btn-primary btn-sm waves-effect waves-light mb-3" data-toggle="modal" data-target="#addOrderModal">Tambah Temuan</button>
               <?php if(session()->get('role') === 'superadmin'): ?>
-              <button type="button" class="btn btn-success btn-sm waves-effect waves-light mb-3 ml-2" data-toggle="modal" data-target="#exportModal">Export</button>
               <?php endif ?>
             </div>
             <table id="datatable" class="table table-bordered dt-responsive nowrap">
@@ -90,11 +89,11 @@
             <input type="text" class="form-control" id="perbaikan" name="perbaikan" required> 
           </div>
           <div class="form-group form-group mb-4">
-            <label for="jenis_tanaman">Kategori Temuan</label>
-            <select class="custom-select" name="jenis_tanaman" id="jenis_tanaman" required>
+            <label for="kategori">Kategori Temuan</label>
+            <select class="custom-select" name="kategori" id="kategori" required>
               <option selected>Pilih Kategori</option>
               <?php foreach($jenis as $data): ?>
-              <option value="<?= $data['id'] ?>"><?= $data['nama_tanaman'] ?></option>
+              <option value="<?= $data['id'] ?>"><?= $data['nama_kategori'] ?></option>
               <?php endforeach ?>
             </select>
           </div>
@@ -108,7 +107,7 @@
             </select>
           </div>
           <div class="form-group form-group mb-4" id="status_order" hidden>
-            <label for="status">Status Order</label>
+            <label for="status">Status Temuan</label>
             <select class="custom-select" name="status" id="status" required>
               <option selected>Pilih Status</option>
             </select>
