@@ -5,7 +5,7 @@ namespace App\Database\Migrations;
 use CodeIgniter\Database\Migration;
 use CodeIgniter\Database\RawSql;
 
-class Orders extends Migration
+class Temuan extends Migration
 {
     public function up()
     {
@@ -34,7 +34,7 @@ class Orders extends Migration
             'perbaikan' => [
                 'type' => 'TEXT'
             ],
-            'jenis_tanaman' => [
+            'kategori' => [
                 'type' => 'INT',
                 'constraint' => 11,
             ],
@@ -57,11 +57,11 @@ class Orders extends Migration
             ],
         ]);
         $this->forge->addKey('id', true);
-        $this->forge->createTable('orders');
+        $this->forge->createTable('temuan');
     }
 
     public function down()
     {
-        $this->forge->dropTable('orders');
+        $this->forge->dropTable('temuan');
     }
 }

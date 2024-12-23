@@ -5,7 +5,7 @@ namespace App\Database\Migrations;
 use CodeIgniter\Database\Migration;
 use CodeIgniter\Database\RawSql;
 
-class JenisTanaman extends Migration
+class Kategori extends Migration
 {
     public function up()
     {
@@ -16,7 +16,7 @@ class JenisTanaman extends Migration
                 'unsigned'       => true,
                 'auto_increment' => true,
             ],
-            'nama_tanaman' => [
+            'nama_kategori' => [
                 'type' => 'TEXT',
             ],
             'created_at' => [
@@ -29,11 +29,11 @@ class JenisTanaman extends Migration
             ],
         ]);
         $this->forge->addKey('id', true);
-        $this->forge->createTable('jenis_tanaman');
+        $this->forge->createTable('kategori');
     }
 
     public function down()
     {
-        $this->forge->dropTable('jenis_tanaman');
+        $this->forge->dropTable('kategori');
     }
 }
