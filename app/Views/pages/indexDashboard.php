@@ -8,10 +8,6 @@
                                                 <div class="col-12">
                                                     <h5>Welcome Back <?= session()->get('name') ?> !</h5>
                                                     <p class="text-muted">Monitoring Temuan SPI</p>
-
-                                                    <div class="mt-4">
-                                                        <a href="#" class="btn btn-primary btn-sm">View more <i class="mdi mdi-arrow-right ml-1"></i></a>
-                                                    </div>
                                                 </div>
                                             </div>
                                         </div>

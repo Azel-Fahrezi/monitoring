@@ -36,7 +36,7 @@ function editOrder(id) {
         }
   
         $('#addOrderModal').modal('show');
-        $('.modal-title').text('Edit Orders');
+        $('.modal-title').text('Temuan');
         $('#select').remove();
         $('#status_order').removeAttr('hidden');
       },
