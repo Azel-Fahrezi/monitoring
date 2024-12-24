@@ -1,8 +1,6 @@
 <br />
 <div id="readme-top" align="center">
-  <a href="https://github.com/mohammadrafly/SIPJP">
-    <img src="images/logo-project.png" alt="Logo" width="120" height="80">
-  </a>
+
 
 <h3 align="center">Aplikasi Monitoring Temuan SPI</h3>
 
