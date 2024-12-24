@@ -1,5 +1,7 @@
 <br />
 <div id="readme-top" align="center">
+![image](https://github.com/user-attachments/assets/736fcacd-1b8b-46b5-866a-e451bc4814c9)
+
 
 
 <h3 align="center">Aplikasi Monitoring Temuan SPI</h3>
